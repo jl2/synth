@@ -168,14 +168,14 @@
   (:item "About"
          (q+:qmessagebox-information
           main-window "About"
-          "Interactively view and manipulate FFT data.")))
+          "Rudimentary Synthesizer.")))
 
 (define-subwidget (main-window synth-viewer) (make-instance 'synth-gl-widget)
   "The central synthesizer viewer")
 
 (define-initializer (main-window setup)
-  "Set the window title and set the fft-controls to be the central widget."
-  (setf (q+:window-title main-window) "Interactive FFT Explorer")
+  "Set the window title and set the synth-viewer to be the central widget."
+  (setf (q+:window-title main-window) "Synthesizer")
   (setf (q+:central-widget main-window) synth-viewer))
 
 (defun main ()
